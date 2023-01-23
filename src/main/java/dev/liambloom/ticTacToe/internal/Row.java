@@ -1,5 +1,6 @@
 package dev.liambloom.ticTacToe.internal;
 
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Row {
@@ -13,11 +14,22 @@ public class Row {
         other lists created by adding points in order, so the trees will
         be very, very unbalanced
      */
-    private final LinkedList<Point> points = new LinkedList<>();
+    private final LinkedList<Mark> marks;
 
     private final Orientation orientation;
 
-    public Row(Orientation orientation) {
+    public Row(Orientation orientation, Mark... marks) {
         this.orientation = orientation;
+        this.marks = new LinkedList<>();
+        Collections.addAll(this.marks, marks);
+    }
+
+    public static Row merge(Row... rows) {
+        // TODO: Merging Rows
+        return null;
+    }
+
+    public int length() {
+        return marks.size();
     }
 }
