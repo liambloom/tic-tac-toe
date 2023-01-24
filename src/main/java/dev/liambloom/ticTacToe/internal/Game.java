@@ -52,7 +52,7 @@ public class Game {
 
             adjRows[adjRows.length - 1] = new Row(orientation, mark);
 
-            if (Row.merge(adjRows).length() >= winLength) {
+            if (Row.merge(orientation, adjRows).length() >= winLength) {
                 // TODO: Game Won
             }
         }

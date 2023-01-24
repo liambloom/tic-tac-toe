@@ -34,4 +34,12 @@ public class Mark {
     public Row getRow(Orientation orientation) {
         return rows[orientation.ordinal()];
     }
+
+    public int getTurnCreated() {
+        return turnCreated;
+    }
+
+    public int getAge() {
+        return game.getTurn() - getTurnCreated();
+    }
 }
